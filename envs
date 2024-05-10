@@ -1,0 +1,7 @@
+
+LOCAL_FOLDER_PATH=.
+REMOTE_FOLDER_PATH=/
+HOST=sub.example.com
+PORT=22
+USERNAME=default_user
+PASSWORD=default_password
