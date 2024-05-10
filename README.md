@@ -22,6 +22,10 @@ python app.py
 
 ## Docker
 
+### Docker Repository
+
+[Docker Repository](https://hub.docker.com/r/mmaous/sftp-uploader)
+
 Alternatively, you can use Docker to run the application. Build the Docker image using the provided Dockerfile and then run the container with the appropriate environment variables.
 
 ```bash
@@ -41,7 +45,3 @@ Contributions are welcome! If you have any suggestions or encounter any issues, 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
-## Docker Repository
-
-[Docker Repository](https://hub.docker.com/r/mmaous/sftp-uploader)
