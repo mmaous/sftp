@@ -28,12 +28,12 @@ jobs:
           username: ${{ env.DOCKERHUB_USERNAME }}
           password: ${{ env.DOCKERHUB_TOKEN }}
 
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+##      - name: Login to GitHub Container Registry
+##         uses: docker/login-action@v3
+##         with:
+##           registry: ghcr.io
+##           username: ${{ github.repository_owner }}
+##           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Get correct semvers
         id: versioning
         run: |
@@ -54,5 +54,5 @@ jobs:
           push: true
           tags: |
             ${{ env.DOCKERHUB_USERNAME }}/${{ env.DOCKERHUB_IMAGE }}:${{ steps.versioning.outputs.latest_version }}
-            ghcr.io/${{ env.DOCKERHUB_USERNAME }}/${{ env.DOCKERHUB_IMAGE }}:${{ steps.versioning.outputs.latest_version }}
+##            ghcr.io/${{ env.DOCKERHUB_USERNAME }}/${{ env.DOCKERHUB_IMAGE }}:${{ steps.versioning.outputs.latest_version }}
 
