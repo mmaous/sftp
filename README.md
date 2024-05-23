@@ -2,7 +2,7 @@
 
 ## Overview
 
-This Python application provides a secure file transfer service using the SFTP (SSH File Transfer Protocol) protocol. It enables users to securely upload files to a remote server without storing any credentials locally. The application runs directly on the edge (i.e., your machine), ensuring that sensitive data remains under your control.
+This Go application provides a secure file transfer service using the SFTP (SSH File Transfer Protocol) protocol. It enables users to securely upload files to a remote server without storing any credentials locally. The application runs directly on the edge (i.e., your machine), ensuring that sensitive data remains under your control.
 
 ## Features
 
@@ -13,11 +13,12 @@ This Python application provides a secure file transfer service using the SFTP (
 ## Usage
 
 1. Clone the repository to your local machine.
-2. Set the required environment variables (`LOCAL_FOLDER_PATH`, `REMOTE_FOLDER_PATH`, `HOST`, `PORT`, `USERNAME`, `PASSWORD`) to specify the local and remote folder paths, host, port, and credentials.
-3. Run the application using Python.
+2. Set the required environment variables (`LOCAL_FOLDER_PATH`, `REMOTE_FOLDER_PATH`, `HOST`, `PORT`, `VM_USERNAME`, `VM_PASSWORD`) to specify the local and remote folder paths, host, port, and credentials.
+3. Build and run the application using Go.
 
 ```bash
-python app.py
+go build -o sftp-app
+./sftp-app
 ```
 
 ## Docker
@@ -28,13 +29,13 @@ Alternatively, you can use Docker to run the application. Build the Docker image
 
 ```bash
 docker build -t sftp-app .
-docker run --rm -e LOCAL_FOLDER_PATH=/path/to/local/folder -e REMOTE_FOLDER_PATH=/path/to/remote/folder -e HOST=my_host -e PORT=my_port -e USERNAME=my_username -e PASSWORD=my_password sftp-app
+docker run --rm -e LOCAL_FOLDER_PATH=/path/to/local/folder -e REMOTE_FOLDER_PATH=/path/to/remote/folder -e HOST=my_host -e PORT=my_port -e VM_USERNAME=my_username -e VM_PASSWORD=my_password sftp-app
 ```
 
 ## Requirements
 
-- Python 3.x
-- Paramiko library (`pip install paramiko`)
+- Go 1.18+
+- go-git and ssh packages (automatically managed by Go modules)
 
 ## Contributing
 

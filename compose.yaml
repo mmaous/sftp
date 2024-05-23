@@ -16,7 +16,8 @@ services:
       - REMOTE_FOLDER_PATH=/
       - HOST=sub.example.com
       - PORT=22
-      - USERNAME=default_user
-      - PASSWORD=default_password      
+      - VM_USERNAME=default_user
+      - VM_PASSWORD=default_password      
     env_file:
       - envs
+      
