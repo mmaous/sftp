@@ -36,5 +36,5 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ${{ env.DOCKERHUB_USERNAME }}/${{ env.DOCKERHUB_IMAGE }}:devops-${{ github.ref_name }}-${{ github.sha }}
+            ${{ env.DOCKERHUB_USERNAME }}/${{ env.DOCKERHUB_IMAGE }}:devops-${{ github.sha }}
 
