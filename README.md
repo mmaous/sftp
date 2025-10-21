@@ -23,7 +23,7 @@ go build -o sftp-app
 
 ## Docker
 
-> [Docker Repository](https://hub.docker.com/r/mmaous/sftp-uploader)
+> [Docker Repository](https://hub.docker.com/r/mmaous/sftp)
 
 Alternatively, you can use Docker to run the application. Build the Docker image using the provided Dockerfile and then run the container with the appropriate environment variables.
 
